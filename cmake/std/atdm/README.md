@@ -8,7 +8,7 @@ This is used to define a set of automated builds of Trilinos that are run with
 Jenkins and post to the main Trilinos CDash site using build names that start
 with `Trilinos-atdm`.  The CTest driver scripts and Jenkins driver scripts
 that use this ATDM configuration are defined in the Trilinos directory
-`cmake/ctest/drivers/atdm/` (see the `README.md` file in that directory for
+`cmake/ctest/drivers/atdm/` (see the [README.md](https://github.com/trilinos/Trilinos/blob/develop/cmake/ctest/drivers/atdm/README.md) file in that directory for
 details) but these details are not necessary in order to just reproduce a
 build locally as described below.
 
