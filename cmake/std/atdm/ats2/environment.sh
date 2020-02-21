@@ -171,10 +171,10 @@ if [[ "$ATDM_CONFIG_COMPILER" == "CUDA-10.1.243_"* ]]; then
   # CUDA Settings
   export CUDA_LAUNCH_BLOCKING=1
   export CUDA_MANAGED_FORCE_DEVICE_ALLOC=1
-  export TMPDIR=/tmp/$(whoami)
-  if [[ ! -d ${TMPDIR} ]] ; then
-    echo "Creating ${TMPDIR} for nvcc wrapper!"
-    mkdir ${TMPDIR}
+  temp_dir="${TMPDIR:-/tmp}"/$(whoami)
+  if [[ ! -d ${temp_dir} ]] ; then
+    echo "Creating ${temp_dir} for nvcc wrapper!"
+    mkdir ${temp_dir}
   fi
   # ATDM Settings
   export ATDM_CONFIG_USE_CUDA=ON
